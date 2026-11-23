@@ -1,3 +1,5 @@
+package Browser;
+
 public class BrowserHistory {
     private Stack backButtonStack;
     private Stack forwardButonStack;

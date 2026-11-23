@@ -1,3 +1,5 @@
+package Browser;
+
 public class Stack {
     private Node top;
     private int size;
