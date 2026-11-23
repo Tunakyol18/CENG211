@@ -12,7 +12,7 @@ public class ReverseArray {
 
         arr[right] = valueLeft;
 
-        reverseArray(arr, left++ , right--);
+        reverseArray(arr, ++left , --right);
     }
 
     public static void displayArray(int[] arr) {
@@ -24,16 +24,25 @@ public class ReverseArray {
 
     public static void main(String[] args) {
 
-        int[] numbers = {10, 20, 30, 40};
+        int[] numbers = {10, 20, 30, 40, 50};
 
 
         System.out.println("Original array:");
         displayArray(numbers);
 
-        reverseArray(numbers, numbers.length, 0);
+        reverseArray(numbers, 0, numbers.length - 1);
 
 
         System.out.println("Reversed array:");
         displayArray(numbers);
     }
 }
+
+// Time Complexity:
+//
+// Measurement       Complexity       Explanation
+//
+// Time complexity   O(n)              The recursive method swaps elements
+//                                     from both ends of the array.
+//                                     It processes approximately n/2 pairs.
+//                                     Therefore, the time complexity is O(n).
